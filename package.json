@@ -1,25 +1,41 @@
 {
-  "author": "Ryan Ralph <ryanralph1991@gmail.com>",
-  "name": "altcoin-address",
-  "description": "altcoin address verification and other related functions",
-  "version": "1.0.4",
-  "homepage": "https://github.com/ryanralph/altcoin-address",
-  "scripts": {
-    "test": "mocha"
-  },
+  "name": "wallet-address-validator",
+  "description": "Wallet address validator for Bitcoin and other Altcoins.",
+  "keywords": [
+    "btc",
+    "bitcoin",
+    "litecoin",
+    "dogecoin",
+    "altcoin",
+    "address",
+    "wallet",
+    "validator",
+    "javascript",
+    "browser",
+    "nodejs"
+  ],
+  "version": "0.1.1",
+  "author": "Tomek Kolasa <tomek@kolasa.me>",
+  "homepage": "https://github.com/ognus/wallet-address-validator",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanralph/altcoin-address.git"
+    "url": "https://github.com/ognus/wallet-address-validator.git"
   },
-  "dependencies": {
-    "int": "0.1.1"
-  },
-  "devDependencies": {
-    "mocha": "1.9.x"
-  },
-  "main": "index",
-  "optionalDependencies": {},
+  "main": "src/wallet_address_validator",
   "engines": {
     "node": "*"
+  },
+  "dependencies": {
+    "jssha": "2.3.1"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "grunt": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-mocha": "latest",
+    "grunt-simple-mocha": "latest",
+    "mocha": "latest"
   }
 }
+
