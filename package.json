@@ -1,25 +1,50 @@
 {
-  "author": "Ryan Ralph <ryanralph1991@gmail.com>",
-  "name": "altcoin-address",
-  "description": "altcoin address verification and other related functions",
-  "version": "1.0.4",
-  "homepage": "https://github.com/ryanralph/altcoin-address",
-  "scripts": {
-    "test": "mocha"
-  },
+  "name": "wallet-address-validator",
+  "description": "Wallet address validator for Bitcoin and other Altcoins.",
+  "keywords": [
+    "btc",
+    "bitcoin",
+    "litecoin",
+    "dogecoin",
+    "altcoin",
+    "address",
+    "wallet",
+    "validator",
+    "javascript",
+    "browser",
+    "nodejs"
+  ],
+  "version": "0.1.2",
+  "author": "Tomek Kolasa <tomek@kolasa.me>",
+  "homepage": "https://github.com/ognus/wallet-address-validator",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanralph/altcoin-address.git"
+    "url": "https://github.com/ognus/wallet-address-validator.git"
   },
-  "dependencies": {
-    "int": "0.1.1"
-  },
-  "devDependencies": {
-    "mocha": "1.9.x"
-  },
-  "main": "index",
-  "optionalDependencies": {},
+  "main": "src/wallet_address_validator",
   "engines": {
     "node": "*"
+  },
+  "scripts": {
+    "bundle": "browserify src/wallet_address_validator.js --standalone WAValidator --outfile dist/wallet-address-validator.js",
+    "minify": "uglifyjs -c -m -o dist/wallet-address-validator.min.js -- dist/wallet-address-validator.js",
+    "test:node": "mocha test",
+    "test:browser": "karma start",
+    "test": "npm run test:node && npm run test:browser",
+    "start": "npm run bundle && npm run minify && npm test"
+  },
+  "dependencies": {
+    "jssha": "2.3.1"
+  },
+  "devDependencies": {
+    "browserify": "^15.1.0",
+    "chai": "^4.1.2",
+    "karma": "^2.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^5.0.2",
+    "uglify-js": "^3.3.13"
   }
 }
