@@ -89,6 +89,11 @@ var CURRENCIES = [{
     addressTypes: {prod: ['3c', '55'], testnet: ['0','5']},
     validator: BTCValidator
 },{
+    name: 'patenttx',
+    symbol: 'ptx',
+    addressTypes: {prod: ['3c', '55'], testnet: ['0','5']},
+    validator: BTCValidator
+},{
     name: 'bitcoinz',
     symbol: 'btcz',
     expectedLength: 26,
