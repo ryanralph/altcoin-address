@@ -216,6 +216,9 @@ describe('WAValidator.validate()', function () {
             valid('mvww6DEJ18dbyQUukpVQXvLgrNDJazZn1Y', 'vertcoin', 'testnet');
             valid('mn3mdEE6cf1snxVsknNz4GRTdSrWXqYp7c', 'VTC', 'testnet');
             valid('Vri6Q4GgNFfdtcpxD961TotJwaSaYQCaL5', 'VTC');
+            valid('vtc1qmzq3erafwvz23yfeu9tu45uz2kx3d7esk0rayg', 'VTC');
+            valid('vtc1qhy8eqwqxpyryz4wctus36yl2uu60t0z6ecrvtc', 'VTC');
+            valid('vtc1qh9y09s2crkp63mk26u3vrq9q4w3h8ee8gepjgw', 'VTC');
         });
 
         it('should return true for correct BitcoinGold addresses', function () {
@@ -439,6 +442,9 @@ describe('WAValidator.validate()', function () {
 
         it('should return false for incorrect vertcoin addresses', function () {
             commonTests('vertcoin');
+            invalid('vtc1qmzq3erafwvz23yabc9tu45uz2kx3d7esk0rayg', 'vertcoin');
+            invalid('vtc1qhy8eqwqxpyryz4wctus36yl2uu60t0z6ecrvt', 'vertcoin');
+            invalid('vtd1qhy8eqwqxpyryz4wctus36yl2uu60t0z6ecrvtc', 'vertcoin');
         });
 
         it('should return false for incorrect bitcoingold addresses', function () {

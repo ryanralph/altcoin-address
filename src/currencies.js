@@ -78,6 +78,7 @@ var CURRENCIES = [{
     name: 'vertcoin',
     symbol: 'vtc',
     addressTypes: {prod: ['0x', '47'], testnet: ['6f', 'c4']},
+    segwitHrp: 'vtc',
     validator: BTCValidator
 },{
     name: 'bitcoingold',

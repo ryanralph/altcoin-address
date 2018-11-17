@@ -70,8 +70,8 @@ function encode (hrp, version, program) {
   return ret;
 }
 
-function isValidAddress(address) {
-    var hrp = 'bc';
+function isValidAddress(address, hrp) {
+    var hrp = hrp || 'bc';
     var ret = decode(hrp, address);
 
     if (ret === null) {

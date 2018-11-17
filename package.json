@@ -24,11 +24,12 @@
     "address",
     "wallet",
     "validator",
+    "vertcoin",
     "javascript",
     "browser",
     "nodejs"
   ],
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Tomek Kolasa <tomek@kolasa.me>",
   "homepage": "https://github.com/ognus/wallet-address-validator",
   "license": "MIT",
