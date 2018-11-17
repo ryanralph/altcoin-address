@@ -291,7 +291,9 @@ describe('WAValidator.validate()', function () {
         it('should return true for correct qtum addresses', function () {
             valid('QNjUiD3bVVZwYTc5AhpeQbS1mfb2guyWhe', 'qtum');
             valid('QVZnSrMwKp6AL4FjUPPnfFgsma6j1DXQXu', 'QTUM');
-            valid('2MxKEf2su6FGAUfCEAHreGFQvEYrfYNHvL7', 'qtum', 'testnet');
+            valid('qcSLSxN1sngCWSrKFZ6UC7ri4hhVSdq9SU', 'qtum', 'testnet');
+            valid('qbgHcqxXYHVJZXHheGpHwLJsB5epDUtWxe', 'qtum', 'testnet');
+            valid('qZqqcqCsVtP2U38WWaUnwshHRpefvCa8hX', 'qtum', 'testnet');
         });
 
         it('should return true for correct votecoin addresses', function () {
@@ -491,6 +493,7 @@ describe('WAValidator.validate()', function () {
             commonTests('qtum');
             invalid('QNPhBbVhDghASxcUh2vHotQUgNeLRFTcfb', 'qtum');
             invalid('QOPhBbVhDghASxcUh2vHotQUgNeLRFTcfa', 'QTUM');
+            invalid('qZqqcqCsVtP2U38ABCUnwshHRpefvCa8hX', 'QTUM', 'testnet');
         });
 
         it('should return false for incorrect votecoin addresses', function () {

@@ -1,9 +1,9 @@
 # wallet-address-validator
-Simple wallet address validator for validating Bitcoin and other altcoins addresses in **Node.js and browser**. 
+Simple wallet address validator for validating Bitcoin and other altcoins addresses in **Node.js and browser**.
 
 Forked from [ryanralph/altcoin-address](https://github.com/ryanralph/altcoin-address).
 
-**File size is ~17 kB (minifed and gzipped)**.
+**File size is ~22 kB (minifed and gzipped)**.
 
 ## Installation
 
@@ -24,7 +24,7 @@ npm install wallet-address-validator
 ###### Parameters
 * address - Wallet address to validate.
 * currency - Optional. Currency name or symbol, e.g. `'bitcoin'` (default), `'litecoin'` or `'LTC'`
-* networkType - Optional. Use `'prod'` (default) to enforce standard address, `'testnet'` to enforce testnet address and `'both'` to enforce nothing. 
+* networkType - Optional. Use `'prod'` (default) to enforce standard address, `'testnet'` to enforce testnet address and `'both'` to enforce nothing.
 
 > Returns true if the address (string) is a valid wallet address for the crypto currency specified, see below for supported currencies.
 
@@ -85,7 +85,7 @@ npm install wallet-address-validator
 * Votecoin/VTC, `'votecoin'` or `'VOT'`
 
 * Zcash/ZEC, `'zcash'` or `'ZEC'`
-    
+
 * Zclassic/ZCL, `'zclassic'` or `'ZCL'`
 
 * ZenCash/ZEN, `'zencash'` or `'ZEN'`
