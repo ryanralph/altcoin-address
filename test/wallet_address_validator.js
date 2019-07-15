@@ -382,6 +382,13 @@ describe('WAValidator.validate()', function () {
             valid('xrb_1q79ahdr36uqn38p5tp5sqwkn73rnpj1k8obtuetdbjcx37d5gahhd1u9cuh', 'nano');
             valid('nano_1q79ahdr36uqn38p5tp5sqwkn73rnpj1k8obtuetdbjcx37d5gahhd1u9cuh', 'nano');
         });
+
+        it('should return true for correct ravencoin addresses', function () {
+            valid('RMMHTBTKyGHygsHrimg4P1wJgRZM4nGjt1', 'ravencoin');
+            valid('rHS8rfdaGQwpjMmvosCyVKFJUVn94LZQX7', 'RVN');
+            valid('mfgRCneCysTz2vdnA1UojL743b2Go2uxxA', 'RVN', 'testnet');
+            valid('n2wrC9HbG5hDagYQUjayfbva9fCWHbmpbT', 'RVN', 'testnet');
+        });
     });
 
     describe('invalid results', function () {
@@ -594,6 +601,12 @@ describe('WAValidator.validate()', function () {
             invalid('nano_1f5e4w33ndqbkx4bw5jtp13kp5xghebfxcmw9hdt1f7goid1s4373w6tjdgu', 'nano');
             invalid('xrb_1111111112111111111111111111111111111111111111111111hifc8npp', 'nano');
             invalid('nano_111111111111111111111111111111111111111111111111111hifc8npp', 'nano');
+        });
+
+        it('should return false for incorrect ravencoin addresses', function () {
+            commonTests('ravencoin');
+            invalid('rHS8rfdaGQwpjMmvosCyVKFJUVn94LZQX7___TOOLONG', 'rvn');
+            invalid('rHS8rfdaGQwpjMsC___INVALIDCHECKSUM', 'rvn');
         });
     });
 });

@@ -78,6 +78,7 @@ npm install wallet-address-validator
 * Qtum/QTUM, `'qtum'` or `'QTUM'`
 
 * Raiblocks/XRB, `'raiblocks'` or `'XRB'`
+* Ravencoin/RVN, `'ravencoin'` or `'RVN'`
 * Ripple/XRP, `'ripple'` or `'XRP'`
 
 * Snowgem/SNG, `'snowgem'` or `'SNG'`

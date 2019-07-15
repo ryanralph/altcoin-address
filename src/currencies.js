@@ -209,9 +209,16 @@ var CURRENCIES = [{
     name: 'raiblocks',
     symbol: 'xrb',
     validator: NANOValidator,
+},{
+    name: 'ravencoin',
+    symbol: 'rvn',
+    addressTypes: {
+        prod: ['3c', '7a'] // "R" and "r" addresses
+   , testnet: ['6f', '6f'] // "m" and "n" addresses
+    },
+    validator: BTCValidator,
 }
 ];
-
 
 module.exports = {
     getByNameOrSymbol: function (currencyNameOrSymbol) {
