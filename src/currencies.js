@@ -209,7 +209,8 @@ var CURRENCIES = [{
     name: 'raiblocks',
     symbol: 'xrb',
     validator: NANOValidator,
-}];
+}
+];
 
 
 module.exports = {
